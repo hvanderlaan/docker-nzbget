@@ -7,8 +7,7 @@
 # ----------------------------------------------------------
 
 if [ ! -f /etc/nzbget.conf ]; then
-	echo "Could not start nzbget because the config file is missing"
-	exit 1
+	curl "https://raw.githubusercontent.com/hvanderlaan/docker-nzbget/master/conf/nzbget.conf" > /etc/nzbget.conf
 fi
 
 nzbget --daemon --configfile /etc/nzbget.conf
