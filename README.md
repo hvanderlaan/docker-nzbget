@@ -35,6 +35,13 @@ image name which is `gameserver/nzbget:latest`.
     docker stop nzbget
     docker start nzbget
 
+Now we can connect to nzbget webgui by entering the following url in your browser
+http://localhost:6789 or by [following this link][2]. The nzbget webgui will ask for
+an username and password.
+
+    username: docker-nzbget
+    password: docker-nzbget
+ 
 ### Notes on the run command
 
  + `-v` is the volume you are mounting `-v host_dir:docker_dir`
@@ -46,4 +53,4 @@ image name which is `gameserver/nzbget:latest`.
 
 [0]: http://www.docker.io/gettingstarted/
 [1]: http://www.nzbget.net
-
+[2]: http://localhost:6789/
