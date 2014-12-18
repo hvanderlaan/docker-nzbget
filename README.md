@@ -18,6 +18,12 @@ Or if you don't trust me clone the repo and build the docker image from there.
     cd docker-nzbget
     docker build -rm -t apps/nzbget .
 
+When you build the images it's best to create a data directory where your downloads
+will be saved.
+
+    cd docker-nzbget
+    mkdir data
+
 ## Running docker-nzbget
 
 Running the first time you need to set your port to a static port of your choice
