@@ -47,7 +47,18 @@ an username and password.
 
     username: docker-nzbget
     password: docker-nzbget
- 
+
+## Commiting docker images
+
+When you changed the newsserver settings it is best to commit your changes to the image.
+With the following steps you will make these settings persistent.
+
+    docker commit nzbget apps/nzbget:latest
+    docker stop nzbget
+    docker rm nzbget
+    docker run --name nzbget -d -p 6789:6789 \
+      -v /opt/docker/docker-nzbget/data:/data apps/nzbget
+
 ### Notes on the run command
 
  + `-v` is the volume you are mounting `-v host_dir:docker_dir`
