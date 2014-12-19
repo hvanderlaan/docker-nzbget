@@ -36,7 +36,7 @@ system you can map the port to 6789 and no proxy is needed.
 From now on when you start/stop docker-nzbget you should use the container id
 with the following commands. To get your container id, after you initial run
 type `sudo docker ps` and it will show up on the left side followed by the
-image name which is `gameserver/nzbget:latest`.
+image name which is `apps/nzbget:latest`.
 
     docker stop nzbget
     docker start nzbget
